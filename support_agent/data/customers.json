@@ -1,0 +1,26 @@
+[
+  {
+    "customer_id": "cus_alex",
+    "name": "Alex Chen",
+    "email": "alex@example.com",
+    "tier": "gold",
+    "locale": "en-US",
+    "risk_level": "low"
+  },
+  {
+    "customer_id": "cus_maria",
+    "name": "Maria Santos",
+    "email": "maria@example.com",
+    "tier": "standard",
+    "locale": "es-ES",
+    "risk_level": "low"
+  },
+  {
+    "customer_id": "cus_lee",
+    "name": "Lee Kim",
+    "email": "lee@example.com",
+    "tier": "standard",
+    "locale": "ko-KR",
+    "risk_level": "medium"
+  }
+]

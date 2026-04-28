@@ -1,0 +1,27 @@
+[
+  {
+    "topic": "refund",
+    "title": "Refund window",
+    "answer": "Refunds are usually available within 14 days if the purchase was delivered and not consumed. Already refunded invoices cannot be refunded again."
+  },
+  {
+    "topic": "payment failed",
+    "title": "Payment failed",
+    "answer": "For failed card payments, ask the customer to check bank limits, 3-D Secure confirmation, and whether money was captured. If delivery_status is not_delivered, do not promise access until payment succeeds."
+  },
+  {
+    "topic": "delivery pending",
+    "title": "Purchase not delivered yet",
+    "answer": "If a paid invoice has pending delivery, ask the customer to wait a few minutes, then escalate with invoice_id, game and payment method if the item is still missing."
+  },
+  {
+    "topic": "subscription",
+    "title": "Subscription cancellation",
+    "answer": "A subscription can be cancelled any time. Renewal refunds are reviewed within 48 hours of the charge."
+  },
+  {
+    "topic": "chargeback",
+    "title": "Chargeback handling",
+    "answer": "Chargeback or stolen-card reports should be routed to the risk team. Do not create a refund ticket until ownership and payment status are verified."
+  }
+]

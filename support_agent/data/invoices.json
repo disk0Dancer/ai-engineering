@@ -1,0 +1,50 @@
+[
+  {
+    "invoice_id": "INV-1001",
+    "customer_id": "cus_alex",
+    "email": "alex@example.com",
+    "amount": 9.99,
+    "currency": "USD",
+    "status": "paid",
+    "game": "Dragon Quest Online",
+    "created_at": "2026-04-12",
+    "payment_method": "card",
+    "delivery_status": "delivered"
+  },
+  {
+    "invoice_id": "INV-1002",
+    "customer_id": "cus_alex",
+    "email": "alex@example.com",
+    "amount": 49.99,
+    "currency": "USD",
+    "status": "refunded",
+    "game": "Dragon Quest Online",
+    "created_at": "2026-03-28",
+    "payment_method": "paypal",
+    "delivery_status": "revoked"
+  },
+  {
+    "invoice_id": "INV-2001",
+    "customer_id": "cus_maria",
+    "email": "maria@example.com",
+    "amount": 14.99,
+    "currency": "EUR",
+    "status": "failed",
+    "game": "Stellar Conflict",
+    "created_at": "2026-04-18",
+    "payment_method": "card",
+    "delivery_status": "not_delivered"
+  },
+  {
+    "invoice_id": "INV-3001",
+    "customer_id": "cus_lee",
+    "email": "lee@example.com",
+    "amount": 7.99,
+    "currency": "USD",
+    "status": "paid",
+    "game": "Pixel Warriors",
+    "created_at": "2026-04-20",
+    "payment_method": "apple_pay",
+    "delivery_status": "pending"
+  }
+]

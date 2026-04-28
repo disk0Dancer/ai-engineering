@@ -1,0 +1,35 @@
+[project]
+name = "intro-ai-agents"
+version = "0.1.0"
+description = "Intro AI Agents course repo with a customer support agent"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Grigorii Churakov" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.8.0"]
+
+[project.scripts]
+support-agent = "support_agent.cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["support_agent"]
+
+[tool.setuptools.package-data]
+support_agent = ["data/*.json"]

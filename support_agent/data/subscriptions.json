@@ -1,0 +1,20 @@
+[
+  {
+    "subscription_id": "SUB-7001",
+    "customer_id": "cus_alex",
+    "plan": "Dragon Plus Monthly",
+    "status": "active",
+    "renewal_date": "2026-05-12",
+    "price": 4.99,
+    "currency": "USD"
+  },
+  {
+    "subscription_id": "SUB-8001",
+    "customer_id": "cus_maria",
+    "plan": "Stellar VIP Monthly",
+    "status": "past_due",
+    "renewal_date": "2026-04-18",
+    "price": 6.99,
+    "currency": "EUR"
+  }
+]
