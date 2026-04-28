@@ -1,4 +1,4 @@
-.PHONY: help install test fmt lint demo clean
+.PHONY: help install test test.todo fmt lint demo clean
 .DEFAULT_GOAL := help
 
 PYTHON ?= python3
@@ -7,7 +7,7 @@ VENV_PY := $(VENV)/bin/python
 VENV_PIP := $(VENV_PY) -m pip
 
 help:
-	@echo "Targets: install test fmt lint demo clean"
+	@echo "Targets: install test test.todo fmt lint demo clean"
 
 $(VENV_PY):
 	$(PYTHON) -m venv $(VENV)
@@ -20,6 +20,9 @@ install: $(VENV_PY)
 
 test:
 	$(VENV_PY) -m pytest -q
+
+test.todo:
+	$(VENV_PY) -m pytest -q -m todo
 
 fmt:
 	$(VENV_PY) -m ruff format .

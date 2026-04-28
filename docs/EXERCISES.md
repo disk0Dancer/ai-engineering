@@ -4,13 +4,13 @@ Use these tasks to extend the agent while preserving the current architecture bo
 
 ## 1. Add a new tool
 
-Implement `cancel_subscription(subscription_id: str)` in `support_agent/tools.py`.
+Implement the TODO in `cancel_subscription(subscription_id: str, reason: str)` in `support_agent/tools.py`.
 
 Acceptance criteria:
 
 - the tool returns structured data;
 - the tool is registered in `TOOLS`;
-- a test proves known and unknown subscription IDs are handled.
+- `make test.todo` passes the cancellation tests.
 
 ## 2. Swap the LLM adapter
 
@@ -49,13 +49,13 @@ Acceptance criteria:
 
 ## 5. Improve context engineering
 
-Update `build_context()` so long tool observations are shortened before they reach the LLM.
+Implement the TODO in `trim_tool_observation()` so long tool observations are shortened before they reach the LLM.
 
 Acceptance criteria:
 
 - context stays readable;
 - important invoice/refund fields are preserved;
-- tests cover long observations.
+- `make test.todo` passes the long-observation test.
 
 ## 6. Describe an MCP migration
 

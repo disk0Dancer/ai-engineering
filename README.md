@@ -26,7 +26,9 @@
 | Context engineering | `support_agent/context.py` |
 | Customer support agent loop | `support_agent/agent.py` |
 
-## Быстрый старт: локально
+## Quick start
+
+### Локально
 
 ```bash
 git clone git@github.com:disk0Dancer/ai-engineering.git
@@ -46,7 +48,7 @@ cd ai-engineering
 make install
 ```
 
-## Быстрый старт: Google Colab
+### Google Colab
 
 В новой Colab notebook выполните одну ячейку:
 
@@ -141,11 +143,38 @@ tests/
 ```bash
 make install   # create .venv, install package + dev tools, run smoke-check
 make demo      # run scripted customer support conversation examples
-make test      # run pytest
+make test      # run baseline pytest checks
+make test.todo # run TODO exercise tests
 make lint      # run ruff check
 make fmt       # run ruff format
 make clean     # remove caches and build artifacts
 ```
+
+## TODO exercises commit
+
+В репозитории есть отдельный коммит с TODO-заданиями. Это удобно для курса:
+
+```bash
+git log --oneline
+# HEAD      Add TODO exercises
+# HEAD~1    Initial commit
+
+# Рабочий demo-agent без TODO:
+git checkout HEAD~1
+make demo
+
+# Вернуться к заданиям:
+git checkout main
+make test.todo
+```
+
+`make test` запускает базовую проверку репозитория и должен проходить. `make test.todo` запускает автотесты для студенческих TODO; они падают до тех пор, пока задания не реализованы.
+
+TODO находятся в:
+
+- `support_agent/tools.py::cancel_subscription`;
+- `support_agent/context.py::trim_tool_observation`;
+- `tests/test_todos.py` — автотесты, описывающие ожидаемое поведение.
 
 ## Следующий шаг
 

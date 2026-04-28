@@ -57,6 +57,23 @@ def get_subscription(subscription_id: str) -> dict[str, Any]:
     return {"found": True, **subscription}
 
 
+def cancel_subscription(subscription_id: str, reason: str) -> dict[str, Any]:
+    """TODO: implement subscription cancellation for the student exercise.
+
+    Expected behaviour:
+    - find subscription by `subscription_id`;
+    - reject unknown IDs with a structured message;
+    - return a cancellation ticket for active/past_due subscriptions;
+    - keep output JSON-serializable.
+    """
+    return {
+        "cancelled": False,
+        "subscription_id": subscription_id.upper(),
+        "message": "TODO: implement cancel_subscription",
+        "reason": reason,
+    }
+
+
 def search_faq(query: str) -> dict[str, Any]:
     query_lower = query.lower()
     query_words = set(query_lower.replace("?", "").split())
@@ -98,6 +115,9 @@ TOOLS: dict[str, FunctionTool] = {
     "lookup_customer": FunctionTool("lookup_customer", "Find customer by email", lookup_customer),
     "get_subscription": FunctionTool(
         "get_subscription", "Look up subscription by subscription_id", get_subscription
+    ),
+    "cancel_subscription": FunctionTool(
+        "cancel_subscription", "Cancel an active support subscription", cancel_subscription
     ),
     "search_faq": FunctionTool("search_faq", "Search support FAQ by text query", search_faq),
     "create_refund_request": FunctionTool(
